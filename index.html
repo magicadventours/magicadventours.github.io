@@ -455,13 +455,49 @@ url("portada-machu-picchu.png") center top / 100% auto no-repeat;
     footer small {
       color: #8395a3;
     }
-
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 26px;
+    padding: 6px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+}
     /* ---------- RESPONSIVE ---------- */
 
     @media (max-width: 850px) {
-      .nav-links {
-        display: none;
-      }
+    .menu-toggle {
+    display: block;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 31, 51, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 14px 24px;
+    text-align: center;
+}
       section {
   scroll-margin-top: 120px;
 }
@@ -551,7 +587,9 @@ url("portada-machu-picchu.png") center top / 100% auto no-repeat;
       <a href="#inicio" class="nav-brand">
         MAGIC <span>ADVENTOURS</span>
       </a>
-
+<button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+    ☰
+</button>
       <div class="nav-links">
         <a href="#esencia">Nuestra esencia</a>
         <a href="#inspirate">Inspírate</a>
