@@ -462,7 +462,48 @@ url("portada-machu-picchu.png") center top / 100% auto no-repeat;
       .nav-links {
         display: none;
       }
+.hero {
+  min-height: auto;
+  padding: 90px 20px 60px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 23, 38, 0.20) 0%,
+      rgba(4, 23, 38, 0.55) 42%,
+      rgba(4, 23, 38, 0.92) 100%
+    ),
+    url("portada-machu-picchu.png") center top / cover no-repeat;
+}
 
+.hero-content {
+  max-width: 100%;
+  transform: none;
+}
+
+.hero h1 {
+  font-size: clamp(46px, 14vw, 72px);
+  line-height: 0.95;
+}
+
+.hero h1 span {
+  font-size: 0.72em;
+  letter-spacing: 4px;
+}
+
+.hero-slogan {
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pretitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+}
       .essence-grid,
       .destination-grid {
         grid-template-columns: 1fr;
