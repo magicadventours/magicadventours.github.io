@@ -590,12 +590,15 @@ url("portada-machu-picchu.png") center top / 100% auto no-repeat;
 <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('active')">
     ☰
 </button>
-      <div class="nav-links">
-        <a href="#esencia">Nuestra esencia</a>
-        <a href="#inspirate">Inspírate</a>
-        <a href="#porque">Por qué Magic</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+     <div class="nav-links">
+    <a href="#esencia" onclick="document.querySelector('.nav-links').classList.remove('active')">Nuestra esencia</a>
+
+    <a href="#inspirate" onclick="document.querySelector('.nav-links').classList.remove('active')">Inspírate</a>
+
+    <a href="#porque" onclick="document.querySelector('.nav-links').classList.remove('active')">Por qué Magic</a>
+
+    <a href="#contacto" onclick="document.querySelector('.nav-links').classList.remove('active')">Contacto</a>
+</div>
 
     </div>
   </nav>
